@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  background-color: tomato;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.logo img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.form input {
+  position: absolute;
+  border-radius: 15px;
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 25%;
+}
+.form input[type="text"] {
+  width: 350px;
+  padding-left: 20px;
+}
+.form input[type="submit"] {
+  margin-left: calc(350px + 20px + 25px);
+  width: 100px;
+  cursor: pointer;
+}

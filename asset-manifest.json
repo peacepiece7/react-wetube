@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-wetube/static/css/main.fe4abff4.chunk.css",
+    "main.js": "/react-wetube/static/js/main.077fc578.chunk.js",
+    "main.js.map": "/react-wetube/static/js/main.077fc578.chunk.js.map",
+    "runtime-main.js": "/react-wetube/static/js/runtime-main.9f440556.js",
+    "runtime-main.js.map": "/react-wetube/static/js/runtime-main.9f440556.js.map",
+    "static/js/2.ce605c85.chunk.js": "/react-wetube/static/js/2.ce605c85.chunk.js",
+    "static/js/2.ce605c85.chunk.js.map": "/react-wetube/static/js/2.ce605c85.chunk.js.map",
+    "index.html": "/react-wetube/index.html",
+    "static/css/main.fe4abff4.chunk.css.map": "/react-wetube/static/css/main.fe4abff4.chunk.css.map",
+    "static/js/2.ce605c85.chunk.js.LICENSE.txt": "/react-wetube/static/js/2.ce605c85.chunk.js.LICENSE.txt",
+    "static/media/pepe.6e184542.jpeg": "/react-wetube/static/media/pepe.6e184542.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f440556.js",
+    "static/js/2.ce605c85.chunk.js",
+    "static/css/main.fe4abff4.chunk.css",
+    "static/js/main.077fc578.chunk.js"
+  ]
+}

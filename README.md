@@ -5,12 +5,16 @@
 
 # 구조
 
+```
+
 index.html --- index.js --- services --- youtube.js
                   ㄴㅡㅡ app.jsx
                             ㅏ--- video_list.jsx --- video_item.jsx
                             ㅏ--- header.jsx
                             ㅏ--- watch.jsx
                   
+```
+
 # 사용한 기능
 
 - react-hooks (useState, useRef, useCallBack, memo)

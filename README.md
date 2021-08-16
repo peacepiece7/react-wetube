@@ -2,6 +2,8 @@
 
 [demo](https://peacepiece7.github.io/react-wetube/)
 
+<br>
+<br>
 
 # 구조
 
@@ -15,10 +17,16 @@ index.html --- index.js --- services --- youtube.js
                   
 ```
 
+<br>
+<br>
+
 # 사용한 기능
 
 - react-hooks (useState, useRef, useCallBack, memo)
 - postCSS
+
+<br>
+<br>
 
 # 태그
 
@@ -27,6 +35,9 @@ index.html --- index.js --- services --- youtube.js
 - gh-pages
 - axios
 - react env
+
+<br>
+<br>
 
 
 # same site 관련 문제

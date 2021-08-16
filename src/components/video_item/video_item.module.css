@@ -10,10 +10,35 @@
   cursor: pointer;
 }
 
-.title {
+.container .title {
+  max-width: 320px;
   font-size: 20px;
   font-weight: 700;
 }
-.image img {
+.container .image img {
   max-width: 320px;
+}
+
+.divide {
+  background-color: white;
+  height: 150px;
+  margin-bottom: 20px;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.divide .title {
+  width: 90%;
+  font-size: 10px;
+  font-weight: 700;
+}
+.divide .image {
+  width: 90%;
+}
+.divide .image img {
+  width: 100%;
 }

@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import styles from "./header.module.css"
 import mainLogo from "../../images/pepe.jpeg"
 
-
 const Header = props => {
     const searchRef = useRef()
 
@@ -18,6 +17,7 @@ const Header = props => {
     const handleLogoClick = () => {
         window.location.reload()
     }
+    
     return <div className={styles.header}>
         <div className={styles.inner}>
             <div onClick={handleLogoClick} className={styles.logo}>

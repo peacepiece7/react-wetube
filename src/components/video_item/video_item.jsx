@@ -3,16 +3,24 @@ import styles from "./video_item.module.css"
 
 const VideoItem = props => {
     const video = props.video
+    const videoInfo = props.videoInfo
 
     const handleVideoClick = () => {
-        console.log("Click video id is..", video.id)
-        props.onVideoId(video.id)
+        props.onVideoInfo(video)
     }
 
-    return <div onClick={handleVideoClick} className={styles.container}>
+    if(!videoInfo){
+        return <div onClick={handleVideoClick} className={styles.container}>
         <div className={styles.image}><img src={video.snippet.thumbnails.medium.url} alt="medium thumbnail"/></div>
         <div className={styles.title}>{video.snippet.title}</div>
     </div>
+    }
+    else{
+        return <div onClick={handleVideoClick} className={styles.divide}>
+        <div className={styles.image}><img src={video.snippet.thumbnails.medium.url} alt="medium thumbnail"/></div>
+        <div className={styles.title}>{video.snippet.title}</div>
+    </div>
+    }
 
 }
 

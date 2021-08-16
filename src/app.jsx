@@ -1,43 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./app.module.css";
 import VideoList from "./components/vide_list/video_list"
 import styles from "./app.module.css"
 import Header from "./components/header/header"
 import Watch from "./components/watch/watch"
 
-const App = () => {
+const App = props => {
+  // youtube는 props.yotube와 같은 참조 값을 가짐, 이 참조값이 변경될 경우(fetch) 아래 useEffect가 실행됨
+  const youtube = props.youtube
   const [videoState, setVideoState] = useState([]);
   const [primaryVideoState, setPrimaryVideoState] = useState(null);
 
   useEffect(() => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBVHAnrthQ31LMqBRaWYb4BGAYGXHvKd18", requestOptions)
-      .then(response => response.json())
-      .then(result => setVideoState(result.items))
-      .catch(error => console.log('error', error));
+    youtube.getLoading().then((result) => {
+      setVideoState(result)
+    })
+  },[youtube])
 
-  },[])
-
-  const handleSearchValue = (value) => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${value}&type=video&key=AIzaSyBVHAnrthQ31LMqBRaWYb4BGAYGXHvKd18`, requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        const youtubeItems = result.items.map((item) => {
-          item.id = item.id.videoId
-          return item
-        })
-        setVideoState(youtubeItems)
-        setPrimaryVideoState(null)
-      })
-      .catch(error => console.log('error', error));
-  }
+  const handleSearchValue = useCallback((value) => {
+    youtube.getSearch(value).then((result)=>{
+      setVideoState(result)
+    })
+    setPrimaryVideoState(null)
+  }, [youtube])
 
   const handleVideoInfo = (videoInfo) => {
     setPrimaryVideoState(videoInfo)

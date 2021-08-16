@@ -21,9 +21,9 @@
 
 .divide {
   background-color: white;
-  height: 150px;
+  height: 250px;
   margin-bottom: 20px;
-  width: 330px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,5 +40,6 @@
   width: 90%;
 }
 .divide .image img {
+  max-width: 380px;
   width: 100%;
 }

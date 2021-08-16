@@ -12,14 +12,23 @@
   background-color: antiquewhite;
 }
 
-.divid {
-  width: 20%;
+.divide {
+  width: 180px;
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  top: 100px;
-  right: 20px;
-  padding-top: 50px;
+  flex-direction: column;
+  top: 120px;
+  right: 5%;
   background-color: antiquewhite;
+}
+
+@media screen and (max-width: 780px) {
+  .divide {
+    width: 70%;
+    top: 1200px;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }
